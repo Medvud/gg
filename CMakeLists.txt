@@ -37,7 +37,7 @@ FetchContent_MakeAvailable(googletest)
 
 enable_testing()
 
-add_executable(test tests/test.cpp)
-add_tests(test)
+add_executable(tests tests/test.cpp)
+add_tests(test tests)
 
 include(CPack)
