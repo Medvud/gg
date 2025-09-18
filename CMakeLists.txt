@@ -16,13 +16,13 @@ add_subdirectory(state_lib)
 add_subdirectory(winnerstate_lib)
 
 add_executable(ChainOfResponsibility main.cpp)
-target_link_libraries(ChainOfResponsibility handler_A handler_B)
+target_link_libraries(ChainOfResponsibility ChainOfResponsibility gumballmachine)
 
 if(BUILD_TESTS)
   enable_testing()
   add_subdirectory(third-party/gtest)
   add_executable(check tests/test.cpp)
-  target_link_libraries(check gtest_main handler_A handler_B)
+  target_link_libraries(check gtest_main ChainOfResponsibility gumballmachine SoldOutState )
   add_test(NAME check COMMAND check)
 endif()
 
