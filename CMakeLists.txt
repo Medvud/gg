@@ -7,7 +7,7 @@ option(BUILD_TESTS "Build tests" OFF)
 
 project(ChainOfResponsibility)
 
-add_subdirectory(qumballmachine_lib)
+add_subdirectory(gumballmachine_lib)
 add_subdirectory(HasQuarterState_lib)
 add_subdirectory(NoQuarterState_lib)
 add_subdirectory(soldoutstate_lib)
